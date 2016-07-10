@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Chat_Client
 {
+
     public partial class Form1 : Form
     {
         preferences pref = new preferences();
@@ -26,9 +29,50 @@ namespace Chat_Client
             sck.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
 
             textBoxCl1ip.Text = getLocalIP();
-            textBoxCl2ip.Text = getLocalIP();
-            textBoxCl1port.Text = "80";
-            textBoxCl2port.Text = "81";
+
+            //config file
+            StreamReader configSR = new StreamReader("Config.txt");
+            try
+            {
+                //making name show
+                string name = configSR.ReadLine();
+                string[] nameData = name.Split(':');
+                name = nameData[1];
+                textBoxName.Text = name;
+            }
+            catch { }
+            try
+            {
+                //making last ip show
+                string lastip = configSR.ReadLine();
+                string[] latsipData = lastip.Split(':');
+                lastip = latsipData[1];
+                textBoxCl2ip.Text = lastip;
+            }
+            catch { }
+            try
+            {
+                //making last port show
+                string lastport = configSR.ReadLine();
+                string[] latsportData = lastport.Split(':');
+                lastport = latsportData[1];
+                textBoxCl2port.Text = lastport;
+                switch(lastport)
+                {
+                    case "80":
+                        textBoxCl1port.Text = "81";
+                        break;
+                    case "81":
+                        textBoxCl1port.Text = "80";
+                        break;
+                }
+
+            }
+            catch { }
+            //closing connection
+            configSR.Close();
+
+
         }
 
         private string getLocalIP()
@@ -113,6 +157,26 @@ namespace Chat_Client
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("Chat Client.exe");
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("");
+        }
+
+        //this runs when form is closing
+        private void exiting(object sender, FormClosingEventArgs e)
+        {
+            //opening file writing connection
+            StreamWriter configSW = new StreamWriter("Config.txt");
+
+            //writing to the file
+            configSW.WriteLine("name:" + textBoxName.Text);
+            configSW.WriteLine("lastip:" + textBoxCl2ip.Text);
+            configSW.WriteLine("port:" + textBoxCl2port.Text);
+
+            //closing connection to save changes
+            configSW.Close();
         }
 
         private void messageCallBack(IAsyncResult aResult)

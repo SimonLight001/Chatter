@@ -47,6 +47,7 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitAndSaveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -218,9 +219,17 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitAndSaveToolStripMenuItem});
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // exitAndSaveToolStripMenuItem
+            // 
+            this.exitAndSaveToolStripMenuItem.Name = "exitAndSaveToolStripMenuItem";
+            this.exitAndSaveToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.exitAndSaveToolStripMenuItem.Text = "Exit and save";
             // 
             // helpToolStripMenuItem
             // 
@@ -273,6 +282,7 @@
             this.MinimumSize = new System.Drawing.Size(513, 400);
             this.Name = "Form1";
             this.Text = "Chat Client";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.exiting);
             this.Client1.ResumeLayout(false);
             this.Client1.PerformLayout();
             this.Client2.ResumeLayout(false);
@@ -305,12 +315,13 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.GroupBox groupBoxQuicksett;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitAndSaveToolStripMenuItem;
     }
 }
 

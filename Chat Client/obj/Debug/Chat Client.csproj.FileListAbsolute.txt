@@ -1,9 +1,9 @@
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\bin\Debug\Chat Client.exe.config
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\bin\Debug\Chat Client.exe
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\bin\Debug\Chat Client.pdb
-c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat Client.csprojResolveAssemblyReference.cache
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat_Client.Properties.Resources.resources
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat Client.csproj.GenerateResource.Cache
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat Client.exe
 c:\users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat Client.pdb
 C:\Users\sipoe\OneDrive\Documents\Visual Studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat_Client.Form1.resources
+C:\Users\sipoe\onedrive\documents\visual studio 2015\Projects\Chat Client\Chat Client\obj\Debug\Chat Client.csprojResolveAssemblyReference.cache

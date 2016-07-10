@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat Client", "Chat Client\Chat Client.csproj", "{EE0D5590-BAD4-4E0B-BE70-B1390AEC53B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CDC6C419-FCFE-4D9E-AC66-FE76A5DF6E25}"
+	ProjectSection(SolutionItems) = preProject
+		Chat Client\bin\Debug\Config.txt = Chat Client\bin\Debug\Config.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
